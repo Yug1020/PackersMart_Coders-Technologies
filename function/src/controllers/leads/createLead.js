@@ -79,7 +79,8 @@ export const createLead = async (req, res) => {
       dropOff,
       propertyType, // Replaced 'services' with 'propertyType'
       movingDate,
-      movingSize
+      movingSize,
+      additionalInformation
     } = req.body;
 
     // 1. Calculate Distance Category synchronously using the matrix
@@ -126,6 +127,7 @@ export const createLead = async (req, res) => {
         existingLead.movingDate = movingDate;
         existingLead.movingSize = movingSize;
         existingLead.lead_score = lead_score;
+        existingLead.additionalInformation = additionalInformation;
         existingLead.lead_quality = lead_quality;
         existingLead.status = 'Pending'; // Reset to pending for new OTP cycle
         

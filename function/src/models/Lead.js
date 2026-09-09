@@ -75,9 +75,14 @@ const leadSchema = new mongoose.Schema(
             enum: ['Small', 'Medium', 'Large'],
             required: true,
         },
+        additionalInformation: {
+            type: String,
+            trim: true,
+            default: ""
+        },   
         status: {
             type: String,
-            enum: ['Pending', 'Verified', 'Fake', 'Duplicate', 'Re-attempt'],
+            enum: ['Pending', 'Verified', 'Fake', 'Duplicate', 'Re-attempt', 'Matched'],
             default: 'Pending',
         },
         lead_score: {

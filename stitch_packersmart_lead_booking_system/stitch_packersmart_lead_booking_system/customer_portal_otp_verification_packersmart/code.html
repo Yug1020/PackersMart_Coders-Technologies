@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-error": "#ffffff", "outline": "#757684", "surface": "#fbf8ff", "secondary-fixed": "#ffddb8", "surface-container-high": "#e8e7f1", "primary-fixed": "#dde1ff", "on-tertiary-fixed-variant": "#802a00", "on-background": "#1a1b22", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#653e00", "primary-fixed-dim": "#b8c4ff", "on-tertiary-container": "#ffa583", "surface-container-low": "#f4f2fc", "error-container": "#ffdad6", "on-surface": "#1a1b22", "on-secondary-fixed": "#2a1700", "tertiary-container": "#872d00", "surface-tint": "#3755c3", "surface-dim": "#dad9e3", "inverse-surface": "#2f3037", "tertiary-fixed": "#ffdbce", "on-primary-container": "#a8b8ff", "surface-container": "#eeedf7", "error": "#ba1a1a", "surface-variant": "#e3e1eb", "inverse-primary": "#b8c4ff", "primary-container": "#1e40af", "on-tertiary-fixed": "#380d00", "tertiary-fixed-dim": "#ffb59a", "tertiary": "#611e00", "secondary-fixed-dim": "#ffb95f", "surface-bright": "#fbf8ff", "secondary-container": "#fea619", "on-primary-fixed": "#001453", "outline-variant": "#c4c5d5", "on-secondary-container": "#684000", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#173bab", "on-surface-variant": "#444653", "surface-container-highest": "#e3e1eb", "surface-container-lowest": "#ffffff", "primary": "#00288e", "on-primary": "#ffffff", "secondary": "#855300", "background": "#fbf8ff", "inverse-on-surface": "#f1f0fa", "on-error-container": "#93000a"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"grid-columns": "12", "gutter-desktop": "24px", "space-unit": "8px", "margin-mobile": "16px", "gutter-mobile": "16px", "margin-desktop": "32px"}, "fontFamily": {"label-sm": ["Inter"], "headline-sm": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"]}, "fontSize": {"label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="PackersMart Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW_mWWIDbLc0-7MlIDABepPY7prcnHwSqOJ-GoeuXDuNyLSq7TED77fbqMmE_7sTc9_LeFQR87Tisdn6eXRgOCWZVlUY1EhMbEeGxUusmj2uLNURo2bu3qiHBDGIiN3Hqyt9B14zCKZrA6YIN7ejdmOxc3zVwc40QHi-XB0Fbqgob6flwa6svvozXrTNH1QHOLXMxlUV8fyaoSlSZpZWYnREfKEni5ixQhSbbtShSQ1668r8cq68Fm0Q"/><span class="text-lg font-headline font-bold text-on-surface tracking-tight">Customer Portal</span></div><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-4 pt-16 pb-24 bg-surface flex-grow"><div class="flex flex-col w-full pb-12">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-label-md transition-all" id="step-1-badge"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<span class="text-label-md font-semibold text-on-surface">Register</span>
+<div class="w-8 h-[2px] bg-surface-container-high mx-1"></div>
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-label-md transition-all" id="step-2-badge">2</div>
+<span class="text-label-md font-semibold text-on-surface">Verify</span>
+<div class="w-8 h-[2px] bg-surface-container-high mx-1"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-label-md transition-all" id="step-3-badge">3</div>
+<span class="text-label-md font-medium text-on-surface-variant">Matches</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded-md text-label-sm bg-primary text-on-primary font-medium transition-all shadow-sm" id="tab-app" onclick="switchView('app')">Portal</button>
+<button class="px-3 py-1.5 rounded-md text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="tab-db" onclick="switchView('db')">Leads DB (<span id="lead-count">0</span>)</button>
+</div>
+</div>
+<div class="flex flex-col w-full" id="view-app">
+<!-- STEP 1: REGISTRATION FORM -->
+<div class="flex flex-col w-full transition-all duration-300 hidden" id="step-1-container">
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm mb-6 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<h2 class="text-headline-sm text-on-surface">Get Instant Relocation Quotes</h2>
+<p class="text-body-sm text-on-surface-variant">Fill out your move details to get matched with verified logistics partners instantly.</p>
+</div>
+</div>
+<form class="flex flex-col gap-4" id="lead-form" onsubmit="handleRegistration(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Customer Name *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">person</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm" id="cust-name" placeholder="John Doe" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Mobile Number (10 digits) *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">smartphone</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm" id="cust-mobile" maxlength="10" pattern="[0-9]{10}" placeholder="9876543210" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Email Address *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">mail</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm" id="cust-email" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Service Type *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">category</span>
+<select class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm appearance-none" id="service-type" required="">
+<option disabled="" selected="" value="">Select service type</option>
+<option value="Local House Shifting">Local House Shifting</option>
+<option value="Intercity Relocation">Intercity Relocation</option>
+<option value="Office Moving">Office Moving</option>
+<option value="Vehicle Transport">Vehicle Transport</option>
+</select>
+<span class="absolute right-3 material-symbols-outlined text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Pickup City *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">trip_origin</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm" id="pickup-city" placeholder="e.g., New York, NY" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Destination City *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">location_on</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm" id="dest-city" placeholder="e.g., Boston, MA" required="" type="text"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Moving Date *</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">calendar_today</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm" id="moving-date" required="" type="date"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm text-on-surface-variant font-medium">Additional Requirements</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 top-3 material-symbols-outlined text-outline text-[18px]">notes</span>
+<textarea class="w-full bg-surface-container-lowest text-on-surface text-body-md pl-10 pr-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-primary/50 transition-all shadow-sm resize-none" id="additional-req" placeholder="Fragile items, elevator availability, etc." rows="1"></textarea>
+</div>
+</div>
+</div>
+<div class="flex justify-end mt-4">
+<button class="bg-primary text-on-primary font-medium px-8 py-3.5 rounded-lg hover:bg-primary-container transition-all shadow-md flex items-center gap-2" type="submit">
+<span>Send Verification OTP</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- STEP 2: OTP VERIFICATION SCREEN -->
+<div class="flex flex-col w-full transition-all duration-300" id="step-2-container">
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm mb-6 max-w-md mx-auto w-full relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-secondary-container/10 rounded-full pointer-events-none"></div>
+<div class="flex flex-col items-center text-center mb-6">
+<div class="w-16 h-16 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[32px]">lock</span>
+</div>
+<h2 class="text-headline-sm text-on-surface">Verify Your Mobile</h2>
+<p class="text-body-sm text-on-surface-variant mt-1">We've sent a 6-digit verification code to <span class="font-semibold text-on-surface" id="display-mobile">+1 (555) ***-**12</span></p>
+</div>
+<!-- TEST DEMO BANNER -->
+<div class="bg-secondary-fixed text-on-secondary-fixed-variant p-4 rounded-lg mb-6 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-bold uppercase tracking-wider">Test Demo Banner</span>
+<span class="text-body-sm">Generated OTP: <strong class="text-headline-sm tracking-widest ml-1 font-mono" id="demo-otp-code">123456</strong></span>
+</div>
+</div>
+<button class="bg-on-secondary-fixed text-secondary-fixed px-3 py-1.5 rounded-md text-label-sm font-bold hover:opacity-90 transition-all" onclick="fillDemoOtp()">Auto-Fill</button>
+</div>
+<form class="flex flex-col gap-6" id="otp-form" onsubmit="handleOtpVerification(event)">
+<div class="flex justify-center gap-2 sm:gap-3">
+<input class="otp-input w-12 h-14 text-center text-headline-md font-bold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm focus:ring-2 focus:ring-primary outline-none" maxlength="1" oninput="moveToNext(this, 1)" onkeydown="handleOtpKeydown(event, 0)" type="text"/>
+<input class="otp-input w-12 h-14 text-center text-headline-md font-bold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm focus:ring-2 focus:ring-primary outline-none" maxlength="1" oninput="moveToNext(this, 2)" onkeydown="handleOtpKeydown(event, 1)" type="text"/>
+<input class="otp-input w-12 h-14 text-center text-headline-md font-bold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm focus:ring-2 focus:ring-primary outline-none" maxlength="1" oninput="moveToNext(this, 3)" onkeydown="handleOtpKeydown(event, 2)" type="text"/>
+<input class="otp-input w-12 h-14 text-center text-headline-md font-bold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm focus:ring-2 focus:ring-primary outline-none" maxlength="1" oninput="moveToNext(this, 4)" onkeydown="handleOtpKeydown(event, 3)" type="text"/>
+<input class="otp-input w-12 h-14 text-center text-headline-md font-bold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm focus:ring-2 focus:ring-primary outline-none" maxlength="1" oninput="moveToNext(this, 5)" onkeydown="handleOtpKeydown(event, 4)" type="text"/>
+<input class="otp-input w-12 h-14 text-center text-headline-md font-bold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm focus:ring-2 focus:ring-primary outline-none" maxlength="1" oninput="moveToNext(this, 6)" onkeydown="handleOtpKeydown(event, 5)" type="text"/>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Expires in: <strong class="font-mono text-on-surface" id="otp-timer">10:00</strong></span>
+</div>
+<button class="text-primary font-medium hover:underline" onclick="resendOtp()" type="button">Resend Code</button>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface-container text-on-surface font-medium py-3 rounded-lg hover:bg-surface-container-high transition-all" onclick="goToStep(1)" type="button">Back</button>
+<button class="flex-1 bg-primary text-on-primary font-medium py-3 rounded-lg hover:bg-primary-container transition-all shadow-md" type="submit">Verify &amp; Match</button>
+</div>
+</form>
+</div>
+</div>
+<!-- STEP 3: SUCCESS CONFIRMATION & MATCHING SCREEN -->
+<div class="hidden flex flex-col w-full transition-all duration-300" id="step-3-container">
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm mb-6 relative overflow-hidden">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-headline-sm text-on-surface">Lead Registered Successfully!</h2>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-bold bg-error-container text-on-error-container" id="quality-rating-badge">HOT LEAD</span>
+</div>
+<p class="text-body-sm text-on-surface-variant">Verified and scored by PackersMart AI Matching Engine.</p>
+</div>
+</div>
+<button class="bg-surface-container text-on-surface text-label-md font-medium px-4 py-2 rounded-lg hover:bg-surface-container-high transition-all flex items-center gap-1.5" onclick="resetPortal()">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>New Lead</span>
+</button>
+</div>
+<!-- LEAD SCORE BREAKDOWN GRID -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col">
+<span class="text-label-sm text-on-surface-variant">Base Score</span>
+<span class="text-headline-md text-on-surface font-bold mt-1">50</span>
+<span class="text-body-sm text-outline mt-0.5">Standard registration</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col">
+<span class="text-label-sm text-on-surface-variant">Urgency Bonus</span>
+<span class="text-headline-md text-on-surface font-bold mt-1" id="score-urgency">+25</span>
+<span class="text-body-sm text-outline mt-0.5">Moving within 7 days</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col">
+<span class="text-label-sm text-on-surface-variant">Intercity Bonus</span>
+<span class="text-headline-md text-on-surface font-bold mt-1" id="score-intercity">+15</span>
+<span class="text-body-sm text-outline mt-0.5">Long-distance route</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col bg-primary text-on-primary">
+<span class="text-label-sm text-on-primary-container">Total Lead Score</span>
+<span class="text-headline-lg font-bold mt-1" id="score-total">90<span class="text-body-sm font-normal opacity-80">/100</span></span>
+<span class="text-body-sm text-on-primary-container mt-0.5">High conversion potential</span>
+</div>
+</div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-headline-sm text-on-surface">Matched Logistics Partners (<span id="match-count">6</span>)</h3>
+<span class="text-body-sm text-on-surface-variant">Sorted by match score &amp; verified rating</span>
+</div>
+<!-- MATCHED COMPANIES LIST -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="matched-companies-list">
+<!-- Populated by JS -->
+</div>
+</div>
+</div>
+</div>
+<!-- VIEW: DATABASE / ADMIN PANEL -->
+<div class="hidden flex flex-col w-full" id="view-db">
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm mb-6">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-headline-sm text-on-surface">Registered Leads Database</h2>
+<p class="text-body-sm text-on-surface-variant">Simulated REST API Local Storage Records</p>
+</div>
+<button class="bg-error-container text-on-error-container text-label-sm font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-all flex items-center gap-1" onclick="clearDatabase()">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Clear All Leads</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high text-label-sm text-on-surface-variant">
+<th class="py-3 px-4">Customer</th>
+<th class="py-3 px-4">Route</th>
+<th class="py-3 px-4">Service</th>
+<th class="py-3 px-4">Score</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="text-body-sm text-on-surface" id="db-leads-table">
+<!-- Populated by JS -->
+</tbody>
+</table>
+</div>
+<div class="hidden flex flex-col items-center justify-center py-12 text-center" id="db-empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[32px]">folder_open</span>
+</div>
+<p class="text-body-md font-medium text-on-surface">No leads registered yet</p>
+<p class="text-body-sm text-on-surface-variant mt-1">Submit the registration form in the portal to create leads.</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // MOCK DATABASE & COMPANIES SEED DATA
+  const seedCompanies = [
+    { id: 1, name: "Agarwal Relocation Services", rating: 4.8, reviews: 1420, baseMatch: 95, badge: "Top Rated", deliveryTime: "1-2 days", priceEstimate: "$$$", logoBg: "bg-primary-container text-on-primary-container" },
+    { id: 2, name: "Express Movers & Packers", rating: 4.6, reviews: 980, baseMatch: 88, badge: "Fastest", deliveryTime: "1 day", priceEstimate: "$$", logoBg: "bg-secondary-container text-on-secondary-container" },
+    { id: 3, name: "CityShift Logistics", rating: 4.7, reviews: 750, baseMatch: 82, badge: "Best Value", deliveryTime: "2-3 days", priceEstimate: "$", logoBg: "bg-tertiary-fixed text-on-tertiary-fixed" },
+    { id: 4, name: "Interstate Cargo Packers", rating: 4.5, reviews: 610, baseMatch: 78, badge: "Long Distance", deliveryTime: "3-5 days", priceEstimate: "$$", logoBg: "bg-surface-container-high text-on-surface" },
+    { id: 5, name: "SafeMove Movers", rating: 4.9, reviews: 2100, baseMatch: 74, badge: "Fully Insured", deliveryTime: "1-2 days", priceEstimate: "$$$$", logoBg: "bg-primary text-on-primary" },
+    { id: 6, name: "Global Relocations", rating: 4.4, reviews: 430, baseMatch: 65, badge: "Enterprise", deliveryTime: "2-4 days", priceEstimate: "$$$", logoBg: "bg-outline text-on-error" }
+  ];
+
+  // REST API SIMULATION STATE
+  let currentLead = {
+    name: "",
+    mobile: "",
+    email: "",
+    serviceType: "",
+    pickupCity: "",
+    destCity: "",
+    movingDate: "",
+    additionalReq: "",
+    otp: "",
+    verified: false,
+    leadScore: 0,
+    qualityRating: "Cold",
+    createdAt: null
+  };
+
+  let generatedOtpCode = "123456";
+  let timerInterval = null;
+  let timeLeft = 600; // 10 minutes in seconds
+
+  // INITIALIZE APP
+  document.addEventListener("DOMContentLoaded", () => {
+    // Set min date for moving date picker to today
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("moving-date").min = today;
+    
+    // Load leads from localStorage if available
+    if (!localStorage.getItem("packers_leads")) {
+      localStorage.setItem("packers_leads", JSON.stringify([]));
+    }
+    
+    updateLeadCount();
+    renderDatabaseTable();
+  });
+
+  function switchView(viewName) {
+    const appView = document.getElementById("view-app");
+    const dbView = document.getElementById("view-db");
+    const tabApp = document.getElementById("tab-app");
+    const tabDb = document.getElementById("tab-db");
+
+    if (viewName === 'app') {
+      appView.classList.remove("hidden");
+      dbView.classList.add("hidden");
+      tabApp.className = "px-3 py-1.5 rounded-md text-label-sm bg-primary text-on-primary font-medium transition-all shadow-sm";
+      tabDb.className = "px-3 py-1.5 rounded-md text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+    } else {
+      appView.classList.add("hidden");
+      dbView.classList.remove("hidden");
+      tabDb.className = "px-3 py-1.5 rounded-md text-label-sm bg-primary text-on-primary font-medium transition-all shadow-sm";
+      tabApp.className = "px-3 py-1.5 rounded-md text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+      renderDatabaseTable();
+    }
+  }
+
+  function goToStep(step) {
+    document.getElementById("step-1-container").classList.add("hidden");
+    document.getElementById("step-2-container").classList.add("hidden");
+    document.getElementById("step-3-container").classList.add("hidden");
+
+    document.getElementById(`step-${step}-container`).classList.remove("hidden");
+
+    // Update badges
+    for (let i = 1; i <= 3; i++) {
+      const badge = document.getElementById(`step-${i}-badge`);
+      if (i < step) {
+        badge.className = "w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-label-md transition-all";
+        badge.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span>`;
+      } else if (i === step) {
+        badge.className = "w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-label-md transition-all";
+        badge.innerText = i;
+      } else {
+        badge.className = "w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-label-md transition-all";
+        badge.innerText = i;
+      }
+    }
+  }
+
+  // STEP 1 HANDLER
+  function handleRegistration(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("cust-name").value.trim();
+    const mobile = document.getElementById("cust-mobile").value.trim();
+    const email = document.getElementById("cust-email").value.trim();
+    const serviceType = document.getElementById("service-type").value;
+    const pickupCity = document.getElementById("pickup-city").value.trim();
+    const destCity = document.getElementById("dest-city").value.trim();
+    const movingDate = document.getElementById("moving-date").value;
+    const additionalReq = document.getElementById("additional-req").value.trim();
+
+    // Client validation for mobile 10 digits
+    if (!/^\d{10}$/.test(mobile)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      document.getElementById("cust-mobile").focus();
+      return;
+    }
+
+    currentLead = {
+      id: "LEAD-" + Math.floor(100000 + Math.random() * 900000),
+      name,
+      mobile,
+      email,
+      serviceType,
+      pickupCity,
+      destCity,
+      movingDate,
+      additionalReq,
+      verified: false,
+      createdAt: new Date().toISOString()
+    };
+
+    // Generate 6-digit OTP
+    generatedOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
+    document.getElementById("demo-otp-code").innerText = generatedOtpCode;
+    document.getElementById("display-mobile").innerText = `+1 (${mobile.slice(0,3)}) ***-${mobile.slice(7)}`;
+
+    // Transition to Step 2
+    goToStep(2);
+    startOtpTimer();
+    
+    // Focus first OTP input
+    document.querySelector(".otp-input").focus();
+  }
+
+  // STEP 2: OTP TIMER & INPUT LOGIC
+  function startOtpTimer() {
+    clearInterval(timerInterval);
+    timeLeft = 600;
+    updateTimerDisplay();
+    
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        alert("OTP has expired. Please request a new one.");
+      }
+    }, 1000);
+  }
+
+  function updateTimerDisplay() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    document.getElementById("otp-timer").innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  function fillDemoOtp() {
+    const inputs = document.querySelectorAll(".otp-input");
+    for (let i = 0; i < 6; i++) {
+      inputs[i].value = generatedOtpCode[i];
+    }
+    inputs[5].focus();
+  }
+
+  function moveToNext(element, index) {
+    if (element.value.length === 1 && index < 6) {
+      const inputs = document.querySelectorAll(".otp-input");
+      if (inputs[index]) {
+        inputs[index].focus();
+      }
+    }
+  }
+
+  function handleOtpKeydown(e, index) {
+    if (e.key === "Backspace") {
+      const inputs = document.querySelectorAll(".otp-input");
+      if (inputs[index].value === "" && index > 0) {
+        inputs[index - 1].focus();
+      }
+    }
+  }
+
+  function resendOtp() {
+    generatedOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
+    document.getElementById("demo-otp-code").innerText = generatedOtpCode;
+    startOtpTimer();
+    alert("New OTP generated! Check the Test Demo Banner.");
+  }
+
+  function handleOtpVerification(e) {
+    e.preventDefault();
+    const inputs = document.querySelectorAll(".otp-input");
+    let enteredOtp = "";
+    inputs.forEach(input => enteredOtp += input.value);
+
+    if (enteredOtp.length < 6) {
+      alert("Please enter the complete 6-digit OTP.");
+      return;
+    }
+
+    if (enteredOtp === generatedOtpCode) {
+      clearInterval(timerInterval);
+      currentLead.verified = true;
+      
+      // RUN SCORING ENGINE
+      calculateLeadScore();
+      
+      // SAVE TO LOCAL STORAGE DB
+      saveLeadToDatabase(currentLead);
+
+      // TRANSITION TO STEP 3
+      goToStep(3);
+      renderMatchedCompanies();
+      updateLeadCount();
+      renderDatabaseTable();
+    } else {
+      alert("Invalid OTP code. Please check the Test Demo Banner or click Auto-Fill.");
+    }
+  }
+
+  // SCORING ENGINE & QUALITY RATING
+  function calculateLeadScore() {
+    let base = 50;
+    let urgencyBonus = 0;
+    let intercityBonus = 0;
+    let completenessBonus = 15; // All required fields filled
+
+    // Calculate urgency based on moving date
+    const moveDate = new Date(currentLead.movingDate);
+    const today = new Date();
+    const diffTime = moveDate - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays <= 7) {
+      urgencyBonus = 25;
+      document.getElementById("score-urgency").innerText = "+25";
+    } else if (diffDays <= 14) {
+      urgencyBonus = 15;
+      document.getElementById("score-urgency").innerText = "+15";
+    } else {
+      urgencyBonus = 5;
+      document.getElementById("score-urgency").innerText = "+5";
+    }
+
+    // Intercity check
+    if (currentLead.serviceType === "Intercity Relocation" || currentLead.pickupCity.toLowerCase() !== currentLead.destCity.toLowerCase()) {
+      intercityBonus = 15;
+      document.getElementById("score-intercity").innerText = "+15";
+    } else {
+      intercityBonus = 5;
+      document.getElementById("score-intercity").innerText = "+5";
+    }
+
+    const totalScore = base + urgencyBonus + intercityBonus + (currentLead.additionalReq ? 10 : 0);
+    currentLead.leadScore = Math.min(totalScore, 100);
+    document.getElementById("score-total").innerHTML = `${currentLead.leadScore}<span class="text-body-sm font-normal opacity-80">/100</span>`;
+
+    // Quality Rating Determination
+    let ratingBadge = document.getElementById("quality-rating-badge");
+    if (currentLead.leadScore >= 80) {
+      currentLead.qualityRating = "HOT";
+      ratingBadge.className = "px-2.5 py-0.5 rounded-full text-label-sm font-bold bg-error-container text-on-error-container";
+      ratingBadge.innerText = "HOT LEAD";
+    } else if (currentLead.leadScore >= 65) {
+      currentLead.qualityRating = "WARM";
+      ratingBadge.className = "px-2.5 py-0.5 rounded-full text-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed-variant";
+      ratingBadge.innerText = "WARM LEAD";
+    } else {
+      currentLead.qualityRating = "COLD";
+      ratingBadge.className = "px-2.5 py-0.5 rounded-full text-label-sm font-bold bg-surface-container-high text-on-surface-variant";
+      ratingBadge.innerText = "COLD LEAD";
+    }
+  }
+
+  // MATCHED COMPANIES ALGORITHM
+  function renderMatchedCompanies() {
+    const listContainer = document.getElementById("matched-companies-list");
+    listContainer.innerHTML = "";
+
+    // Sort companies dynamically based on lead requirements & base match score
+    const sortedCompanies = [...seedCompanies].map(company => {
+      let scoreBoost = 0;
+      if (currentLead.serviceType === "Intercity Relocation" && company.badge === "Long Distance") scoreBoost += 10;
+      if (currentLead.serviceType === "Local House Shifting" && company.badge === "Fastest") scoreBoost += 8;
+      return {
+        ...company,
+        computedMatch: Math.min(company.baseMatch + scoreBoost, 99)
+      };
+    }).sort((a, b) => b.computedMatch - a.computedMatch);
+
+    document.getElementById("match-count").innerText = sortedCompanies.length;
+
+    sortedCompanies.forEach(comp => {
+      const card = document.createElement("div");
+      card.className = "bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between gap-4 hover:shadow-md transition-all";
+      card.innerHTML = `
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl ${comp.logoBg} flex items-center justify-center font-bold text-headline-sm">
+              ${comp.name.charAt(0)}
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h4 class="text-label-md font-bold text-on-surface">${comp.name}</h4>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary-fixed text-on-primary-fixed">${comp.badge}</span>
+              </div>
+              <div class="flex items-center gap-2 mt-0.5 text-body-sm text-on-surface-variant">
+                <span class="flex items-center text-amber-600 font-semibold"><span class="material-symbols-outlined text-[14px] fill-current">star</span> ${comp.rating}</span>
+                <span>•</span>
+                <span>${comp.reviews} reviews</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="text-headline-sm font-bold text-primary">${comp.computedMatch}%</span>
+            <span class="block text-[10px] text-on-surface-variant uppercase tracking-wider font-medium">Match Score</span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-surface-container-high text-body-sm">
+          <div class="flex items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[16px]">schedule</span>
+            <span>Est: ${comp.deliveryTime}</span>
+          </div>
+          <div class="flex items-center gap-1 text-on-surface font-semibold">
+            <span>Price: ${comp.priceEstimate}</span>
+          </div>
+          <button onclick="alert('Quote requested successfully from ${comp.name}!')" class="bg-primary text-on-primary text-label-sm font-medium px-3.5 py-1.5 rounded-lg hover:bg-primary-container transition-all">
+            Get Quote
+          </button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+  }
+
+  // REST API LOCAL STORAGE SIMULATION
+  function saveLeadToDatabase(lead) {
+    let leads = JSON.parse(localStorage.getItem("packers_leads")) || [];
+    leads.unshift(lead); // Add to beginning
+    localStorage.setItem("packers_leads", JSON.stringify(leads));
+  }
+
+  function updateLeadCount() {
+    let leads = JSON.parse(localStorage.getItem("packers_leads")) || [];
+    document.getElementById("lead-count").innerText = leads.length;
+  }
+
+  function renderDatabaseTable() {
+    let leads = JSON.parse(localStorage.getItem("packers_leads")) || [];
+    const tbody = document.getElementById("db-leads-table");
+    const emptyState = document.getElementById("db-empty-state");
+    tbody.innerHTML = "";
+
+    if (leads.length === 0) {
+      emptyState.classList.remove("hidden");
+      return;
+    } else {
+      emptyState.classList.add("hidden");
+    }
+
+    leads.forEach((lead, index) => {
+      const tr = document.createElement("tr");
+      tr.className = "border-b border-surface-container-high hover:bg-surface-container transition-all";
+      
+      let badgeColor = "bg-primary-container text-on-primary-container";
+      if (lead.qualityRating === "HOT") badgeColor = "bg-error-container text-on-error-container";
+      if (lead.qualityRating === "WARM") badgeColor = "bg-secondary-fixed text-on-secondary-fixed-variant";
+
+      tr.innerHTML = `
+        <td class="py-3 px-4">
+          <div class="font-medium text-on-surface">${lead.name}</div>
+          <div class="text-body-sm text-outline">${lead.mobile} • ${lead.email}</div>
+        </td>
+        <td class="py-3 px-4">
+          <div class="text-on-surface">${lead.pickupCity} → ${lead.destCity}</div>
+          <div class="text-body-sm text-outline">Move: ${lead.movingDate}</div>
+        </td>
+        <td class="py-3 px-4">
+          <span class="px-2.5 py-1 rounded-md text-label-sm bg-surface-container-high text-on-surface-variant font-medium">${lead.serviceType}</span>
+        </td>
+        <td class="py-3 px-4 font-bold text-primary">
+          ${lead.leadScore}/100
+        </td>
+        <td class="py-3 px-4">
+          <span class="px-2 py-0.5 rounded-full text-label-sm font-bold ${badgeColor}">${lead.qualityRating}</span>
+        </td>
+        <td class="py-3 px-4 text-right">
+          <button onclick="deleteLead(${index})" class="text-error hover:opacity-80 p-1 rounded transition-all" title="Delete Lead">
+            <span class="material-symbols-outlined text-[18px]">delete</span>
+          </button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function deleteLead(index) {
+    let leads = JSON.parse(localStorage.getItem("packers_leads")) || [];
+    leads.splice(index, 1);
+    localStorage.setItem("packers_leads", JSON.stringify(leads));
+    updateLeadCount();
+    renderDatabaseTable();
+  }
+
+  function clearDatabase() {
+    if (confirm("Are you sure you want to delete all registered leads?")) {
+      localStorage.setItem("packers_leads", JSON.stringify([]));
+      updateLeadCount();
+      renderDatabaseTable();
+    }
+  }
+
+  function resetPortal() {
+    document.getElementById("lead-form").reset();
+    goToStep(1);
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="bg-primary-container text-on-primary-container font-bold"><div class="flex justify-around items-center h-16 px-4"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-12 transition-all rounded-xl bg-primary-container text-on-primary-container font-bold" data-path="customer-portal" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="text-label-sm">Customer</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-all rounded-xl" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="text-label-sm">Admin</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-all rounded-xl" data-path="bookings" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="text-label-sm">Bookings</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-all rounded-xl" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="text-label-sm">Settings</span></a></div></nav></body></html>
