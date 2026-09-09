@@ -10,11 +10,20 @@ export const getMatchingCompanies = async (req, res) => {
       return res.status(404).json({ success: false, message: 'Lead not found.' });
     }
 
-    // <-- NEW CHECK: Stop if lead is already matched
-    if (lead.status === 'Matched') {
+    // <-- NEW CHECK: Ensure lead is Verified before searching for companies
+    if (lead.status !== 'Verified') {
+      let errorMessage = 'Only verified leads can be matched with companies.';
+      if (lead.status === 'Matched') {
+        errorMessage = 'This lead has already been matched with a company.';
+      } else if (lead.status === 'Pending' || lead.status === 'Re-attempt') {
+        errorMessage = 'This lead is pending OTP verification.';
+      } else {
+        errorMessage = `Cannot search matches for a lead with status: ${lead.status}.`;
+      }
+
       return res.status(400).json({
         success: false,
-        message: 'This lead has already been matched with a company.',
+        message: errorMessage,
       });
     }
 

@@ -10,7 +10,8 @@ import { companyRouter } from './src/route/companyRouter.js';
 
 const app = express()
 app.use(cors({
-    origin: process.env.API,
+    origin: process.env.API_CLIENT,
+    origin:process.env.API_ADMIN,
     credentials: true,
 }))
 

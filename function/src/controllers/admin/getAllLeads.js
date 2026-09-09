@@ -4,7 +4,7 @@ export const getAllLeads = async (req, res) => {
   try {
     // Fetch all leads, sorted by newest first, selecting only the necessary fields
     const leads = await Lead.find({})
-      .select('firstName lastName pickUp dropOff propertyType movingDate status createdAt')
+      .select('firstName lastName pickUp dropOff propertyType movingDate status lead_quality createdAt')
       .sort({ createdAt: -1 });
 
     // Format the output to explicitly match the admin display requirements
@@ -15,6 +15,7 @@ export const getAllLeads = async (req, res) => {
       destination: lead.dropOff,
       serviceType: lead.propertyType,
       date: lead.movingDate,
+      leadQuality: lead.lead_quality,
       currentStatus: lead.status
     }));
 

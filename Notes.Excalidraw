@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "uiGuItZnnwKzQqxG0KPqf",
+      "type": "text",
+      "x": 310.4000244140625,
+      "y": 136.0000457763672,
+      "width": 522.6396484375,
+      "height": 475,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 1441589493,
+      "version": 845,
+      "versionNonce": 190283733,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1788945141657,
+      "link": null,
+      "locked": false,
+      "text": "leadsRoutes\n    POST ->   /lead/createlead     ( CreateLead )\n    POST ->   /lead/:id/verify-otp ( verifyOtp)\n\n AdminRoutes\n    GET ->  /admin/leads           (GetAll leads)\n    GET -> /admin/leads/stats    (getLeadStats)\n    GET -> /admin/leads/verified  (getVerifiedLeads)\n    GET -> /admin/leads/pending  (getPendingLeads)\n    GET -> /admin/leads/fake     (getFakeLeads)\n    GET -> admin/leads/matched  (getMatchedLeads)\n    GET -> admin/leads/:id         (getFakeLeads)\n    GET -> admin/leads/matched  (getMatchedLeads)\n    GET -> admin/leads/:id         (getLeadById)\n\nCompany & Matching Routes \n     GET= -> company/matched/:lead_id \n    POST -> company/Matched/:lead_id/:compnay_id\n    ",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "leadsRoutes\n    POST ->   /lead/createlead     ( CreateLead )\n    POST ->   /lead/:id/verify-otp ( verifyOtp)\n\n AdminRoutes\n    GET ->  /admin/leads           (GetAll leads)\n    GET -> /admin/leads/stats    (getLeadStats)\n    GET -> /admin/leads/verified  (getVerifiedLeads)\n    GET -> /admin/leads/pending  (getPendingLeads)\n    GET -> /admin/leads/fake     (getFakeLeads)\n    GET -> admin/leads/matched  (getMatchedLeads)\n    GET -> admin/leads/:id         (getFakeLeads)\n    GET -> admin/leads/matched  (getMatchedLeads)\n    GET -> admin/leads/:id         (getLeadById)\n\nCompany & Matching Routes \n     GET= -> company/matched/:lead_id \n    POST -> company/Matched/:lead_id/:compnay_id\n    ",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
