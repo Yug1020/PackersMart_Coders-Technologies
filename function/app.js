@@ -4,14 +4,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { leadsRouter } from './src/route/leadsRouter.js';
+import { adminRouter } from './src/route/adminRouter.js';
 
 const app = express()
 
 async function main() {
     app.use(express.json())
 
-    // app.use("/", (req, res) => res.send("API is running"));
     app.use("/lead", leadsRouter);
+    app.use("/admin", adminRouter);
 
     try {
         await mongoose.connect(process.env.MONGODB)
